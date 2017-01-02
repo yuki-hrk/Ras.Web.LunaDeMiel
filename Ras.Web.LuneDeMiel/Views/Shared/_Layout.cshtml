@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="headerMenuTemp navbar-fixed-top">
+<<<<<<< HEAD
         <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Honey")');">
             <p>はちみつ</p>
         </div>
@@ -34,6 +35,26 @@
         <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "GiftBox")');">
             <p>ギフトボックス</p>
         </div>
+=======
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>はちみつ</p>
+        </div>
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>養蜂家</p>
+        </div>
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>食べ合わせ</p>
+        </div>
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>健康食品</p>
+        </div>
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>基礎知識</p>
+        </div>
+        <div class="headerMenuCellTemp" onclick="return false;">
+            <p>ギフト</p>
+        </div>
+>>>>>>> origin/master
     </div>
     <div>
         @RenderBody()
@@ -44,9 +65,12 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<<<<<<< HEAD
 
 <script>
     function link(url) {
         location.href = url;
     }
 </script>
+=======
+>>>>>>> origin/master

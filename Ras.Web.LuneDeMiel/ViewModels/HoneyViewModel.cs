@@ -7,5 +7,6 @@ namespace Ras.Web.LuneDeMiel.ViewModels
 {
     public class HoneyViewModel
     {
+        // こめんと
     }
 }
