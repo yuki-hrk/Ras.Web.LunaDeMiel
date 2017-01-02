@@ -120,15 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CreatorController.cs" />
-    <Compile Include="Controllers\GiftBoxController.cs" />
-    <Compile Include="Controllers\GiftController.cs" />
-    <Compile Include="Controllers\HealthFoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HoneyController.cs" />
-    <Compile Include="Controllers\KnowledgeController.cs" />
-    <Compile Include="Controllers\MariageController.cs" />
-    <Compile Include="Controllers\SecondaryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,13 +179,6 @@
     <Content Include="Views\Honey\Study.cshtml" />
     <Content Include="Views\Honey\Edit.cshtml" />
     <Content Include="Views\Honey\BulkEdit.cshtml" />
-    <Content Include="Views\Creator\Index.cshtml" />
-    <Content Include="Views\Gift\Index.cshtml" />
-    <Content Include="Views\GiftBox\Index.cshtml" />
-    <Content Include="Views\HealthFood\Index.cshtml" />
-    <Content Include="Views\Knowledge\Index.cshtml" />
-    <Content Include="Views\Mariage\Index.cshtml" />
-    <Content Include="Views\Secondary\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

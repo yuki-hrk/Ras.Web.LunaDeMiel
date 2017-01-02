@@ -10,29 +10,23 @@
 </head>
 <body>
     <div class="headerMenuTemp navbar-fixed-top">
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Honey")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>はちみつ</p>
         </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Creator")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>養蜂家</p>
         </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Mariage")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>食べ合わせ</p>
         </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Secondary")');">
-            <p>二次製品</p>
-        </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "HealthFood")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>健康食品</p>
         </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Knowledge")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>基礎知識</p>
         </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "Gift")');">
+        <div class="headerMenuCellTemp" onclick="return false;">
             <p>ギフト</p>
-        </div>
-        <div class="headerMenuCellTemp" onclick="link('@Url.Action("Index", "GiftBox")');">
-            <p>ギフトボックス</p>
         </div>
     </div>
     <div>
@@ -44,9 +38,3 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
-
-<script>
-    function link(url) {
-        location.href = url;
-    }
-</script>
