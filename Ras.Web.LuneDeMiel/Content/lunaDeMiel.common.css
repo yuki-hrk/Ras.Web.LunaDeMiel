@@ -225,8 +225,7 @@ div.main{
 
 div.main>div.content{
 	margin: 0px auto 50px auto;
-	width: 90%;
-	padding:15px;
+	width: 100%;
 	border: 5px double #FF8000;
 	background-color: #FFFFa0
 }
@@ -248,6 +247,7 @@ td.item-name:before{
 
 table.info {
     font-size: 14px;
+    width: 80%;
     border-collapse:separate;
     border-spacing:2px;
 }
