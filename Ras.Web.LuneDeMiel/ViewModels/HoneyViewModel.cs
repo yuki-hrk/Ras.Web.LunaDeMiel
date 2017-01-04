@@ -9,6 +9,5 @@ namespace Ras.Web.LuneDeMiel.ViewModels
     {
         // こめんと
         // テストコメント kuroishi
-        // テストコメント obonai
     }
 }
