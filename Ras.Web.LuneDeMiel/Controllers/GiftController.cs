@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ras.Web.LuneDeMiel.ViewModels.Gift;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,68 @@ namespace Ras.Web.LuneDeMiel.Controllers
         // GET: Gift
         public ActionResult Index()
         {
-            return View();
+            // For mockup
+            var listViewModel = new GiftListViewModel
+            {
+                SearchCondition = new GiftSearchConditionViewModel(),
+                Gifts = new List<GiftViewModel>
+                {
+                    new GiftViewModel
+                    {
+                        Name = "オレンジとベリーの宝石箱",
+                        Price = 1836,
+                        Items = new List<GiftItemViewModel>
+                        {
+                            new GiftItemViewModel
+                            {
+                                Name = "スペイン　オレンジ"
+                            },
+                            new GiftItemViewModel
+                            {
+                                Name = "はちみつコンフィチュール　3種のベリー"
+                            }
+                        }
+                    },
+                    new GiftViewModel
+                    {
+                        Name = "さくらんぼの宝石箱",
+                        Price = 4320,
+                        Items = new List<GiftItemViewModel>
+                        {
+                            new GiftItemViewModel
+                            {
+                                Name = "イタリア　さくらんぼ"
+                            },
+                            new GiftItemViewModel
+                            {
+                                Name = "はちみつコンフィチュール　さくらんぼ"
+                            }
+                        }
+                    },
+                    new GiftViewModel
+                    {
+                        Name = "果実の贈りもの（トリオ）",
+                        Price = 1836,
+                        Items = new List<GiftItemViewModel>
+                        {
+                            new GiftItemViewModel
+                            {
+                                Name = "イタリア　さくらんぼ"
+                            },
+                            new GiftItemViewModel
+                            {
+                                Name = "はちみつコンフィチュール　さくらんぼ"
+                            },
+                            new GiftItemViewModel
+                            {
+                                Name = "はちみつコンフィチュール　3種のベリー"
+                            }
+                        }
+                    }
+                }
+            };
+
+            return View(listViewModel);
         }
     }
 }

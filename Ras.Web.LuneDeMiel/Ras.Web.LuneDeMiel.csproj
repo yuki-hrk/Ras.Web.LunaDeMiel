@@ -22,7 +22,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile>false</UseGlobalApplicationHostFile>
+    <UseGlobalApplicationHostFile>
+    </UseGlobalApplicationHostFile>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -133,6 +134,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Gift\GiftItemViewModel.cs" />
+    <Compile Include="ViewModels\Gift\GiftListViewModel.cs" />
+    <Compile Include="ViewModels\Gift\GiftSearchConditionViewModel.cs" />
+    <Compile Include="ViewModels\Gift\GiftViewModel.cs" />
     <Compile Include="ViewModels\HoneyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
