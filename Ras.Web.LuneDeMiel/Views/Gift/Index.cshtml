@@ -1,4 +1,5 @@
-﻿@using Ras.Web.LuneDeMiel.ViewModels.Gift
+﻿@using PagedList.Mvc;
+@using Ras.Web.LuneDeMiel.ViewModels.Gift
 @model GiftListViewModel
 @{
     ViewBag.Title = "ギフト一覧";
@@ -34,6 +35,7 @@
 
 <div class="main">
     <div class="content">
+        @Html.PagedListPager(Model.Gifts, page => Url.RouteUrl(new { @page = page }))
         <table class="listTable"
                style="margin-left: auto; margin-right: auto; width: 90%">
             <tr>
@@ -54,5 +56,6 @@
                 }
             }
         </table>
+        @Html.PagedListPager(Model.Gifts, page => Url.RouteUrl(new { @page = page }))
     </div>
 </div>

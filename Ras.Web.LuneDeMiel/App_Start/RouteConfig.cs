@@ -13,6 +13,13 @@ namespace Ras.Web.LuneDeMiel
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // ギフト一覧
+            routes.MapRoute(
+                name: "GiftIndexRoute",
+                url: "Gift/{page}",
+                defaults: new { controller = "Gift", action = "Index", page = 1 }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -1,4 +1,7 @@
-﻿using Ras.Web.LuneDeMiel.ViewModels.Gift;
+﻿using PagedList;
+using Ras.Web.LuneDeMiel.Helpers;
+using Ras.Web.LuneDeMiel.Logics;
+using Ras.Web.LuneDeMiel.ViewModels.Gift;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,67 +16,20 @@ namespace Ras.Web.LuneDeMiel.Controllers
     public class GiftController : Controller
     {
         // GET: Gift
-        public ActionResult Index()
+        // GET: Gift/{page}
+        public ActionResult Index(int page)
         {
-            // For mockup
+            /*
+             * For Mockup
+             */
+
+            var logic = new GiftLogic();
+            var gifts = logic.SelectGift();
+
             var listViewModel = new GiftListViewModel
             {
                 SearchCondition = new GiftSearchConditionViewModel(),
-                Gifts = new List<GiftViewModel>
-                {
-                    new GiftViewModel
-                    {
-                        Name = "オレンジとベリーの宝石箱",
-                        Price = 1836,
-                        Items = new List<GiftItemViewModel>
-                        {
-                            new GiftItemViewModel
-                            {
-                                Name = "スペイン　オレンジ"
-                            },
-                            new GiftItemViewModel
-                            {
-                                Name = "はちみつコンフィチュール　3種のベリー"
-                            }
-                        }
-                    },
-                    new GiftViewModel
-                    {
-                        Name = "さくらんぼの宝石箱",
-                        Price = 4320,
-                        Items = new List<GiftItemViewModel>
-                        {
-                            new GiftItemViewModel
-                            {
-                                Name = "イタリア　さくらんぼ"
-                            },
-                            new GiftItemViewModel
-                            {
-                                Name = "はちみつコンフィチュール　さくらんぼ"
-                            }
-                        }
-                    },
-                    new GiftViewModel
-                    {
-                        Name = "果実の贈りもの（トリオ）",
-                        Price = 1836,
-                        Items = new List<GiftItemViewModel>
-                        {
-                            new GiftItemViewModel
-                            {
-                                Name = "イタリア　さくらんぼ"
-                            },
-                            new GiftItemViewModel
-                            {
-                                Name = "はちみつコンフィチュール　さくらんぼ"
-                            },
-                            new GiftItemViewModel
-                            {
-                                Name = "はちみつコンフィチュール　3種のベリー"
-                            }
-                        }
-                    }
-                }
+                Gifts = PagedListHelper.NewInstance(gifts, page)
             };
 
             return View(listViewModel);
