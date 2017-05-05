@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,6 @@ namespace Ras.Web.LuneDeMiel.ViewModels.Gift
         public GiftSearchConditionViewModel SearchCondition { get; set; }
 
         /// <summary> ギフトリスト </summary>
-        public IList<GiftViewModel> Gifts { get; set; }
+        public IPagedList<GiftViewModel> Gifts { get; set; }
     }
 }
