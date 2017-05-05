@@ -10,6 +10,9 @@ namespace Ras.Web.LuneDeMiel.ViewModels.Gift
     /// </summary>
     public class GiftViewModel
     {
+        /// <summary> ID </summary>
+        public string Id { get; set; }
+
         /// <summary> 商品名 </summary>
         public string Name { get; set; }
 
