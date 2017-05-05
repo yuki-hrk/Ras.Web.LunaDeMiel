@@ -6,13 +6,18 @@ table.listTable{
 
 .listTable th{
 	border: solid 1px #c0c0c0;
-	background-color: white;
+	background-color: #E5E5E5;
 	padding:10px;
 }
 
 .listTable td{
 	border: dotted 1px #c0c0c0;
 	padding:10px;
+}
+
+file {
+	font-size: small;
+	width:100%;
 }
 
 .headerMenuTemp{
@@ -197,7 +202,7 @@ div.modifiable>.word{
 	position: absolute;
 	top: 0px;
 	right: 0px;
-    bottom: 0px;
+	bottom: 0px;
 	left: 0px;
 	visibility: hidden;
 }
@@ -246,25 +251,25 @@ td.item-name:before{
 }
 
 table.info {
-    font-size: 14px;
-    width: 80%;
-    border-collapse:separate;
-    border-spacing:2px;
+	font-size: 14px;
+	width: 80%;
+	border-collapse:separate;
+	border-spacing:2px;
 }
 
 table.info th, table.info td {
-    padding: 10px;
+	padding: 10px;
 }
 
 table.info th {
-    background: #ffc040;
-    color: #FFF;
-    text-align: left;
-    width: auto;
-    overflow: visible;
-    position: relative;
-    font-weight: normal;
-    font-size: 14px;
+	background: #ffc040;
+	color: #FFF;
+	text-align: left;
+	width: auto;
+	overflow: visible;
+	position: relative;
+	font-weight: normal;
+	font-size: 14px;
 }
 
 table.info th:before{
@@ -272,18 +277,18 @@ table.info th:before{
 }
 
 table.info th:after {
-    left: 100%;
-    top: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-left-color: #ffc040;
-    border-width: 7px;
-    margin-top: -7px;
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #ffc040;
+	border-width: 7px;
+	margin-top: -7px;
 }
 
 table.info td {
@@ -291,17 +296,53 @@ table.info td {
 }
 
 button.normal {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 7px 20px;
-    background-color: #0097DB;
-    color: #fff;
-    border-style: none;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #C9C9C9;
+	color: #000;
+	border-style: none;
+	margin: 0px 5px;
 }
 button.normal:hover {
 	cursor: pointer;
-	background-color: #00B9EF;
+	background-color: #E5E5E5;
 }
 button.normal:active {
-    background-color: #005982;
+	background-color: #AFAFAF;
+}
+
+button.success {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #0097DB;
+	color: #fff;
+	border-style: none;
+	margin: 0px 5px;
+}
+button.success:hover {
+	cursor: pointer;
+	background-color: #00B9EF;
+}
+button.success:active {
+	background-color: #005982;
+}
+
+
+button.delete {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #ff463d;
+	color: #fff;
+	border-style: none;
+	margin: 0px 5px;
+}
+button.delete:hover {
+	cursor: pointer;
+	background-color: #FF706B;
+}
+button.delete:active {
+	background-color: #D10600;
 }
