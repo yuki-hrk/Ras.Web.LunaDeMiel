@@ -9,9 +9,21 @@
 <div class="searchConditionTemp">
     <table style="margin-right: auto; margin-left: auto;">
         <tr>
+            <th>商品名</th>
+            <td>
+                @Html.TextBoxFor(m => m.SearchCondition.Name)
+            </td>
+        </tr>
+        <tr>
             <th>内訳商品名</th>
             <td>
                 @Html.TextBoxFor(m => m.SearchCondition.ProductName)を含む
+            </td>
+        </tr>
+        <tr>
+            <th>内訳商品原産国</th>
+            <td>
+                @Html.DropDownListFor(m => m.SearchCondition.CountryId, Model.SearchCondition.CountrySelectList)
             </td>
         </tr>
         <tr>

@@ -28,7 +28,19 @@ namespace Ras.Web.LuneDeMiel.Controllers
 
             var listViewModel = new GiftListViewModel
             {
-                SearchCondition = new GiftSearchConditionViewModel(),
+                SearchCondition = new GiftSearchConditionViewModel
+                {
+                    CountrySelectList = new SelectList(
+                        new Dictionary<int, string>
+                        {
+                            { 0, "選択してください" },
+                            { 1, "日本" },
+                            { 2, "フランス" }
+                        },
+                        "Key",
+                        "Value",
+                        0)
+                },
                 Gifts = PagedListHelper.NewInstance(gifts, page)
             };
 
