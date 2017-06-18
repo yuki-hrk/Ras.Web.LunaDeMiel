@@ -1,4 +1,121 @@
-﻿/* fujita */
+﻿/* 
+    全画面共通
+*/
+div.main{
+	width: 100%;
+	height: 100%;
+}
+
+div.main>div.content{
+	margin: 0px auto 50px auto;
+	width: 100%;
+	border: 5px double #FF8000;
+	background-color: #FFFFa0
+}
+
+div.view-name{
+	margin: 10px;
+	font-size: 20pt;
+}
+
+div.view-name:before{
+	content: url("Images/honey_icon01.png");
+	position: relative;
+	top: 7px;
+}
+
+td.item-name:before{
+	content: url("Images/honey_icon02.png");
+}
+
+/* 
+    全画面共通 ボタン
+*/
+button.normal {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #C9C9C9;
+	color: #000;
+	border-style: none;
+	margin: 0px 5px;
+}
+button.normal:hover {
+	cursor: pointer;
+	background-color: #E5E5E5;
+}
+button.normal:active {
+	background-color: #AFAFAF;
+}
+
+button.success {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #0097DB;
+	color: #fff;
+	border-style: none;
+	margin: 0px 5px;
+}
+button.success:hover {
+	cursor: pointer;
+	background-color: #00B9EF;
+}
+button.success:active {
+	background-color: #005982;
+}
+
+button.delete {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #ff463d;
+	color: #fff;
+	border-style: none;
+	margin: 0px 5px;
+}
+button.delete:hover {
+	cursor: pointer;
+	background-color: #FF706B;
+}
+button.delete:active {
+	background-color: #D10600;
+}
+
+/* 
+    ヘッダ
+*/
+.headerMenu{
+	width:100%;
+	height:30px;
+	vertical-align:middle;
+	border: dotted 1px #c0c0c0;
+	background-color: #FFCC66;
+	margin:0px 0px 0px 0px;
+}
+
+.headerMenu .headerMenuCell{
+	width:150px;
+	height: 100%;
+	font-size: 12pt;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.headerMenu .headerMenuCell:HOVER{
+	letter-spacing: 5px;
+	background-color: #ff9932;
+	transition: all .1s;
+}
+
+
+/* 
+    リスト
+*/
 table.listTable{
 	border: medium solid #c0c0c0;
 	background-color: white;
@@ -20,117 +137,13 @@ file {
 	width:100%;
 }
 
-.headerMenuTemp{
-	width:100%;
-	height:30px;
-	vertical-align:middle;
-	border: dotted 1px #c0c0c0;
-	background-color: #FFCC66;
-	margin:0px 0px 0px 0px;
-}
 
-.successbutton {
-	width: 70px;
-	text-align: center;
-	border: 1px solid #15aeec;
-	background-color: #49c0f0;
-	background-image: -webkit-linear-gradient(top, #49c0f0, #2cafe3);
-	background-image: linear-gradient(to bottom, #49c0f0, #2cafe3);
-	border-radius: 4px;
-	color: #fff;
-	line-height: 30px;
-	-webkit-transition: none;
-	transition: none;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-}
-.successbutton:hover {
-	border:1px solid #1090c3;
-	background-color: #1ab0ec;
-	background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
-	background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
-}
-.successbutton:active {
-	background: #1a92c2;
-	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
-	color: #1679a1;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
-}
-
-.simplebutton {
-	width: 70px;
-	text-align: center;
-	border: 1px solid #ececec;
-	background-color: #f0f0f0;
-	background-image: -webkit-linear-gradient(top, #f0f0f0, #e3e3e3);
-	background-image: linear-gradient(to bottom, #f0f0f0, #e3e3e3);
-	border-radius: 4px;
-	color: #000;
-	line-height: 30px;
-	-webkit-transition: none;
-	transition: none;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-}
-.simplebutton:hover {
-	border:1px solid #c3c3c3;
-	background-color: #ececec;
-	background-image: -webkit-linear-gradient(top, #ececec, #c2c2c2);
-	background-image: linear-gradient(to bottom, #ececec, #c2c2c2);
-}
-.simplebutton:active {
-	background: #c2c2c2;
-	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
-	color: #a1a1a1;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
-}
-
-.button {
-	border: 1px solid #ececec;
-	background-color: #f0f0f0;
-	background-image: -webkit-linear-gradient(top, #f0f0f0, #e3e3e3);
-	background-image: linear-gradient(to bottom, #f0f0f0, #e3e3e3);
-	border-radius: 4px;
-	color: #000;
-	line-height: 30px;
-	-webkit-transition: none;
-	transition: none;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-}
-.button:hover {
-	border:1px solid #c3c3c3;
-	background-color: #ececec;
-	background-image: -webkit-linear-gradient(top, #ececec, #c2c2c2);
-	background-image: linear-gradient(to bottom, #ececec, #c2c2c2);
-}
-.button:active {
-	background: #c2c2c2;
-	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
-	color: #a1a1a1;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
-}
-
-.headerMenuTemp .headerMenuCellTemp{
-	width:150px;
-	height: 100%;
-	font-size: 12pt;
-	font-weight: bold;
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	transition: all .3s;
-}
-
-.headerMenuTemp .headerMenuCellTemp:HOVER{
-	letter-spacing: 5px;
-	background-color: #ff9932;
-	transition: all .1s;
-}
-
-.bottombutton{
+.bottombuttonArea{
 	width: 100%;
 	text-align: center;
 }
 
+/* 勉強機能共通 */
 .questionText{
 	width:80%;
 	margin-left: auto;
@@ -139,7 +152,7 @@ file {
 
 
 /* obonai */
-div.searchConditionTemp{
+div.searchCondition{
 	margin-left : auto;
 	margin-right : auto;
 	margin-bottom : 20px;
@@ -149,41 +162,33 @@ div.searchConditionTemp{
 	border: 5px double #FF8000;
 }
 
-div.searchConditionTemp table{
+div.searchCondition table{
 }
 
-div.searchConditionTemp th{
+div.searchCondition th{
 	width:150px;
 	height:30px;
 	border-bottom: thin solid #c0c0c0;
 }
 
-div.searchConditionTemp td{
+div.searchCondition td{
 	width:250px;
 	height:30px;
 	border-bottom: thin solid #c0c0c0;
 }
 
-.buttonCenter{
+div.searchCondition .searchButton{
 	margin-top:10px;
 	text-align: center;
 }
 
-table.listTableTemp{
-	border: medium solid #c0c0c0;
+div.bulkEditButtton{
+	margin:0px 10px 5px 0px;
+	text-align: right;
 }
-
-.listTableTemp th{
-	padding : 20px;
-}
-
-.listTableTemp tr{
-	padding : 20px;
-	visibility: visible;
-}
-
 
 /* haraki */
+/* 編集画面共通 */
 div.modifiable{
 	background-color: #000;
 	position: relative;
@@ -221,33 +226,6 @@ div.modifiable:hover>.word{
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	visibility:visible;
-}
-
-div.main{
-	width: 100%;
-	height: 100%;
-}
-
-div.main>div.content{
-	margin: 0px auto 50px auto;
-	width: 100%;
-	border: 5px double #FF8000;
-	background-color: #FFFFa0
-}
-
-div.view-name{
-	margin: 10px;
-	font-size: 20pt;
-}
-
-div.view-name:before{
-	content: url("Images/honey_icon01.png");
-	position: relative;
-	top: 7px;
-}
-
-td.item-name:before{
-	content: url("Images/honey_icon02.png");
 }
 
 table.info {
@@ -295,54 +273,3 @@ table.info td {
 	background: #ffe080;
 }
 
-button.normal {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 10px 30px;
-	background-color: #C9C9C9;
-	color: #000;
-	border-style: none;
-	margin: 0px 5px;
-}
-button.normal:hover {
-	cursor: pointer;
-	background-color: #E5E5E5;
-}
-button.normal:active {
-	background-color: #AFAFAF;
-}
-
-button.success {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 10px 30px;
-	background-color: #0097DB;
-	color: #fff;
-	border-style: none;
-	margin: 0px 5px;
-}
-button.success:hover {
-	cursor: pointer;
-	background-color: #00B9EF;
-}
-button.success:active {
-	background-color: #005982;
-}
-
-
-button.delete {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 10px 30px;
-	background-color: #ff463d;
-	color: #fff;
-	border-style: none;
-	margin: 0px 5px;
-}
-button.delete:hover {
-	cursor: pointer;
-	background-color: #FF706B;
-}
-button.delete:active {
-	background-color: #D10600;
-}

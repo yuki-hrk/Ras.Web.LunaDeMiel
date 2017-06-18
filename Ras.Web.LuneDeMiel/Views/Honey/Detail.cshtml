@@ -57,7 +57,13 @@
 	<div style="text-align:center;">
 		<span>
 			<button class="normal" type="button">戻る</button>
-			<button class="normal" type="button">編集</button>
+			<button class="normal" type="button" onclick="editView()">編集</button>
 		</span>
 	</div>
 </div>
+
+<script>
+	function editView() {
+		link('@Url.Action("Edit", "Honey")');
+	}
+</script>

@@ -149,6 +149,9 @@
     <Compile Include="ViewModels\Gift\GiftListViewModel.cs" />
     <Compile Include="ViewModels\Gift\GiftSearchConditionViewModel.cs" />
     <Compile Include="ViewModels\Gift\GiftViewModel.cs" />
+    <Compile Include="ViewModels\Honey\HoneyListItemViewModel.cs" />
+    <Compile Include="ViewModels\Honey\HoneySearchConditionViewModel.cs" />
+    <Compile Include="ViewModels\Honey\HoneyListViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

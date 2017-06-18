@@ -1,10 +1,13 @@
-﻿
+﻿@using PagedList.Mvc;
+@using Ras.Web.LuneDeMiel.ViewModels.Honey;
+
+@model HoneyListViewModel
 @{
 	ViewBag.Title = "はちみつ 一覧";
 }
 
 <div class="view-name">はちみつ一覧</div>
-<div class="searchConditionTemp">
+<div class="searchCondition">
 	<table style="margin-right: auto; margin-left: auto;">
 		<tr>
 			<th>商品名</th>
@@ -26,29 +29,35 @@
 			</td>
 		</tr>
 		<tr>
-			<th>八分類</th>
+			<th>分類</th>
 			<td>
 				<select name="example">
 					<option value=""></option>
-					<option value="フルーツ">フルーツ</option>
-					<option value="草花">草花</option>
-					<option value="樹木">樹木</option>
-					<option value="ハーブ">ハーブ</option>
-					<option value="百花蜜">百花蜜</option>
-					<option value="ナッツ">ナッツ</option>
-					<option value="甘露蜜">甘露蜜</option>
+					<option value="1">フルーツ</option>
+					<option value="2">草花</option>
+					<option value="3">樹木</option>
+					<option value="4">ハーブ</option>
+					<option value="5">百花蜜</option>
+					<option value="6">ナッツ</option>
+					<option value="7">甘露蜜</option>
 				</select>
 			</td>
 		</tr>
 	</table>
-	<div class="buttonCenter">
+	<div class="searchButton">
 		<button class="normal" type="button">検索</button>
 	</div>
 </div>
+
 <div class="main">
 	<div class="content">
+		@* 一括編集 *@
+		@Html.PagedListPager(Model.Honeys, page => Url.RouteUrl(new { @page = page }))
+		<div class="bulkEditButtton">
+			<button class="normal" type="button" onclick="bulkEditView()">一括編集する</button>
+		</div>
 		<table class="listTable"
-			   style="margin-left: auto; margin-right: auto; width: 90%">
+				style="margin-left: auto; margin-right: auto; width: 95%">
 			<tr>
 				<th>商品名</th>
 				<th>値段</th>
@@ -58,93 +67,42 @@
 				<th width="80px"></th>
 				<th width="80px"></th>
 			</tr>
-			<tr>
-				<td><a href="@Url.Action("Detail", "Honey")" />おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
-			<tr>
-				<td>おいしいはちみつ</td>
-				<td>1,250円</td>
-				<td>イギリス</td>
-				<td>いろんな花</td>
-				<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-				<td><button class="normal" type="button" style="padding: 5px 12px;">削除</button></td>
-			</tr>
+			@{
+				foreach (var honey in Model.Honeys)
+				{
+					<tr>
+						<td><a href="@Url.Action("Detail", "Honey")" />@honey.Name</td>
+						<td>
+							@{
+								foreach (var sizePrice in honey.SizePriceDictionary)
+								{
+									<div style="margin: 5px 0px;">
+										@Html.Raw("" + sizePrice.Value.ToString("N") + "円 / " + sizePrice.Key + "g </span>")
+									</div>
+								}
+							}
+						</td>
+						<td>@honey.Municipal</td>
+						<td>@honey.FlowerName</td>
+						<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
+						<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
+						<td><button class="delete" type="button" style="padding: 5px 12px;">削除</button></td>
+					</tr>
+								}
+			}
 		</table>
+		@Html.PagedListPager(Model.Honeys, page => Url.RouteUrl(new { @page = page }))
 	</div>
 </div>
 <script>
+	@* 編集画面に遷移 *@
 	function editView()
 	{
 		link('@Url.Action("Edit", "Honey")');
+	}
+
+	@* 一括編集画面に遷移 *@
+	function bulkEditView() {
+		link('@Url.Action("BulkEdit", "Honey")');
 	}
 </script>
