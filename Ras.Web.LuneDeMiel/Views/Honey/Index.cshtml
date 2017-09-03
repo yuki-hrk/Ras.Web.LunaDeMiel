@@ -25,7 +25,7 @@
 			<th>値段</th>
 			<td>
 				<input type="number" min="0" max="99999" size="5" value="">円
-				～ <input type="number" min="0" max="99999" value="1300">円
+				～ <input type="number" min="0" max="99999" size="5" value="1300">円
 			</td>
 		</tr>
 		<tr>
@@ -65,7 +65,6 @@
 				<th>花の名前</th>
 				<th>画像</th>
 				<th width="80px"></th>
-				<th width="80px"></th>
 			</tr>
 			@{
 				foreach (var honey in Model.Honeys)
@@ -85,8 +84,7 @@
 						<td>@honey.Municipal</td>
 						<td>@honey.FlowerName</td>
 						<td><img style="width: 50px; height: 50px;" src="~/Content/Images/honey01.jpg" /></td>
-						<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="editView()">編集</button></td>
-						<td><button class="delete" type="button" style="padding: 5px 12px;">削除</button></td>
+						<td><button class="normal" type="button" style="padding: 5px 12px;" onclick="detailView()">詳細</button></td>
 					</tr>
 								}
 			}
@@ -95,10 +93,10 @@
 	</div>
 </div>
 <script>
-	@* 編集画面に遷移 *@
-	function editView()
+	@* 詳細画面に遷移 *@
+	function detailView()
 	{
-		link('@Url.Action("Edit", "Honey")');
+		link('@Url.Action("Detail", "Honey")');
 	}
 
 	@* 一括編集画面に遷移 *@
