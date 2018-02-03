@@ -153,6 +153,10 @@
     <Compile Include="ViewModels\Honey\HoneySearchConditionViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyListViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyViewModel.cs" />
+    <Compile Include="ViewModels\Mariage\MariageRowViewModel.cs" />
+    <Compile Include="ViewModels\Mariage\MariageListViewModel.cs" />
+    <Compile Include="ViewModels\Mariage\MariageSearchCondViewModel.cs" />
+    <Compile Include="ViewModels\Mariage\MariageDetailViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -213,6 +217,7 @@
     <Content Include="Views\Knowledge\Index.cshtml" />
     <Content Include="Views\Mariage\Index.cshtml" />
     <Content Include="Views\Secondary\Index.cshtml" />
+    <Content Include="Views\Mariage\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
