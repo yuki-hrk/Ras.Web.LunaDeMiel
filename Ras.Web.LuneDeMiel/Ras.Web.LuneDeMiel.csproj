@@ -129,6 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants\CommonEnums.cs" />
     <Compile Include="Constants\SystemConst.cs" />
     <Compile Include="Controllers\CreatorController.cs" />
     <Compile Include="Controllers\GiftBoxController.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="ViewModels\Honey\HoneySearchConditionViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyListViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyViewModel.cs" />
+    <Compile Include="ViewModels\Mariage\MariageRegistViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -213,6 +215,7 @@
     <Content Include="Views\Knowledge\Index.cshtml" />
     <Content Include="Views\Mariage\Index.cshtml" />
     <Content Include="Views\Secondary\Index.cshtml" />
+    <Content Include="Views\Mariage\regist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

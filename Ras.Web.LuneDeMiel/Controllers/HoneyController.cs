@@ -80,9 +80,32 @@ namespace Ras.Web.LuneDeMiel.Controllers
         }
 
         // GET: Honey/Edit?id={id}
-        public ActionResult Edit()
+        public ActionResult Edit(int? id)
         {
-            return View();
+			if (!id.HasValue)
+			{
+				// TODO エラー
+
+				id = 1;
+			}
+
+			var viewModel = new HoneyListItemViewModel()
+			{
+				Id = id.Value,
+				Name = "JA青森りんご",
+				Municipal = "日本 青森県",
+				FlowerName = "りんご",
+				SizePriceDictionary = new Dictionary<int, int>()
+					{
+						{100, 1404},
+						{250, 2592}
+					},
+				imageBytes = null
+			};
+
+			return View();
+
+			return View();
         }
 
         // GET: Honey/BulkEdit

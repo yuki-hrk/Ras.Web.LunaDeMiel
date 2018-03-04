@@ -1,4 +1,7 @@
-﻿
+﻿@using PagedList.Mvc;
+@using Ras.Web.LuneDeMiel.ViewModels.Honey;
+
+@model HoneyListItemViewModel
 @{
 	ViewBag.Title = "はちみつ 詳細";
 }
@@ -13,21 +16,25 @@
 			<table class="info">
 				<tr>
 					<th>商品名</th>
-					<td>タスマニア レザーウッド</td>
+					<td>@Model.Name</td>
 				</tr>
 				<tr>
 					<th>値段</th>
 					<td>
-						<span>2,160円/125g</span>
-						<span>(<u>税抜：2,000円</u>)</span>
-						<br />
-						<span>3,996円/250g</span>
-						<span>(<u>税抜：3,700円</u>)</span>
+						@{
+							foreach (var sizePrice in Model.SizePriceDictionary)
+							{
+								<div style="margin: 5px 0px;">
+									<span>@(sizePrice.Value.ToString("N"))円/@(sizePrice.Key)g</span>
+									<span>(<u>税抜：@(sizePrice.Value.ToString("N"))円</u>)</span>
+								</div>
+							}
+						}
 					</td>
 				</tr>
 				<tr>
 					<th>分類</th>
-					<td>樹木</td>
+					<td>@Model.</td>
 				</tr>
 				<tr>
 					<th>養蜂家</th>

@@ -1,0 +1,87 @@
+﻿@using Ras.Web.LuneDeMiel.ViewModels.Mariage;
+@model MariageRegistViewModel
+@{
+	ViewBag.Title = "食べ合わせ 新規登録";
+	var HoneyTypeDiv = new List<SelectListItem>()
+	{
+		new SelectListItem() {Value = "1", Text = "野菜" },
+		new SelectListItem() {Value = "2", Text = "甘露蜜" },
+		new SelectListItem() {Value = "3", Text = "草花" },
+		new SelectListItem() {Value = "4", Text = "フルーツ" },
+		new SelectListItem() {Value = "5", Text = "百花蜜" },
+		new SelectListItem() {Value = "6", Text = "ナッツ" },
+		new SelectListItem() {Value = "7", Text = "ハーブ" },
+		new SelectListItem() {Value = "8", Text = "樹木" }
+	};
+
+	var CountryDiv = new List<SelectListItem>()
+	{
+		new SelectListItem() {Value = "1", Text = "ギリシャ" },
+		new SelectListItem() {Value = "2", Text = "日本" },
+		new SelectListItem() {Value = "3", Text = "台湾" },
+		new SelectListItem() {Value = "4", Text = "フランス" },
+		new SelectListItem() {Value = "5", Text = "ハンガリー" },
+		new SelectListItem() {Value = "6", Text = "ニュージーランド" },
+		new SelectListItem() {Value = "7", Text = "タスマニア" },
+		new SelectListItem() {Value = "8", Text = "スペイン" }
+	};
+}
+<style>
+	input[type="text"] {
+		width: 300px;
+	}
+</style>
+
+<div class="view-name">食べ合わせ新規登録</div>
+<div class=main>
+	<div class="content">
+		<div class="modifiable" style="float:left;">
+			<img src="~/Content/Images/honey01.jpg" />
+			<span class="word">画像を変更する</span>
+		</div>
+		<div>
+			<table class="info">
+				<tr>
+					<th rowspan="3">使った商品</th>
+					<th>商品名</th>
+					<td>@Html.TextBox(Model.ProductName)</td>
+				</tr>
+				<tr>
+					<th>はちみつ分類</th>
+					<td>
+						@Html.DropDownListFor(model => model.HoneyType, HoneyTypeDiv)
+					</td>
+				</tr>
+				<tr>
+					<th>産地</th>
+					<td>
+						（国）@Html.DropDownListFor(model => model.CountryId, CountryDiv)
+						（地域）@Html.TextBox(Model.MunicipalName)
+					</td>
+				</tr>
+				<tr valign="top">
+					<th colspan="2">食品名</th>
+					<td>@Html.TextBox(Model.FoodName)</td>
+				</tr>
+				<tr valign="top">
+					<th colspan="2">説明</th>
+					<td>
+						@Html.TextAreaFor(model => model.Countent, 6, 100, htmlAttributes: new { style = "max-width:100%; width:100%;" })
+					</td>
+				</tr>
+				<tr valign="top">
+					<th colspan="2">感想・コメント</th>
+					<td>
+						@Html.TextAreaFor(model => model.Countent, 6, 100, htmlAttributes: new { style = "max-width:100%; width:100%;" })
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div style="text-align:center;">
+	<span>
+		<button class="success" type="button">登録</button>
+		<button class="normal" type="button">キャンセル</button>
+	</span>
+</div>
