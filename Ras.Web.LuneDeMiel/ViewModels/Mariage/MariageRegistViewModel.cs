@@ -26,7 +26,7 @@ namespace Ras.Web.LuneDeMiel.ViewModels.Mariage
 		public string FoodName { get; set; }
 
 		/// <summary> 説明 </summary>
-		public string Countent { get; set; }
+		public string Content { get; set; }
 
 		/// <summary> コメント </summary>
 		public string Comment { get; set; }

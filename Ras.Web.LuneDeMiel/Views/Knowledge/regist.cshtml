@@ -1,0 +1,41 @@
+﻿@using Ras.Web.LuneDeMiel.ViewModels.Knowladge;
+@model KnowladgeRegistViewModel
+@{
+	ViewBag.Title = "基礎知識 新規登録";
+}
+<style>
+	input[type="text"] {
+		width: 300px;
+	}
+</style>
+
+<div class="view-name">基礎知識新規登録</div>
+<div class=main>
+	<div class="content">
+		<div class="modifiable" style="float:left;">
+			<img src="~/Content/Images/no_image.png" />
+			<span class="word">画像を変更する</span>
+		</div>
+		<div>
+			<table class="info">
+				<tr>
+					<th>タイトル</th>
+					<td>@Html.TextBoxFor(model => model.Title)</td>
+				</tr>
+				<tr>
+					<th>内容</th>
+					<td>
+						<span style="color:red; font-weight:bold;">※出題キーワードとする箇所は<>で囲んでください。</span>
+						@Html.TextAreaFor(model => model.Content, 8, 70, htmlAttributes: new { style = "max-width:100%; width:100%;" })
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div style="text-align:center;">
+	<span>
+		<button class="success" type="button">登録</button>
+		<button class="normal" type="button">キャンセル</button>
+	</span>
+</div>
