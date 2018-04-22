@@ -28,6 +28,11 @@ td.item-name:before{
 	content: url("Images/honey_icon02.png");
 }
 
+div.subtitle:before{
+	content: url("Images/honey_icon02.png");
+    margin-right:5px;
+}
+
 /* 
     全画面共通 ボタン
 */

@@ -5,13 +5,19 @@ using System.Web;
 
 namespace Ras.Web.LuneDeMiel.ViewModels.Knowledge
 {
-	public class KnowledgeRegistViewModel
+	/// <summary>
+	/// 基礎知識勉強画面ビューモデル
+	/// </summary>
+	public class KnowledgeStudyViewModel
 	{
 		/// <summary> タイトル </summary>
 		public string Title { get; set; }
 
-		/// <summary> 内容 </summary>
-		public string Content { get; set; }
+		/// <summary> 内容 (前半)</summary>
+		public string ContentFirst { get; set; }
+
+		/// <summary> 内容(後半) </summary>
+		public string ContentEnd { get; set; }
 
 		/// <summary> キーワード </summary>
 		public string Keyword { get; set; }

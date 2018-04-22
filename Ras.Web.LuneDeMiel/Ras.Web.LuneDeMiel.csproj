@@ -155,6 +155,7 @@
     <Compile Include="ViewModels\Honey\HoneyListViewModel.cs" />
     <Compile Include="ViewModels\Honey\HoneyViewModel.cs" />
     <Compile Include="ViewModels\Knowledge\KnowledgeRegistViewModel.cs" />
+    <Compile Include="ViewModels\Knowledge\KnowledgeStudyViewModel.cs" />
     <Compile Include="ViewModels\Mariage\MariageRowViewModel.cs" />
     <Compile Include="ViewModels\Mariage\MariageListViewModel.cs" />
     <Compile Include="ViewModels\Mariage\MariageSearchCondViewModel.cs" />
@@ -223,6 +224,7 @@
     <Content Include="Views\Mariage\Detail.cshtml" />
     <Content Include="Views\Mariage\Regist.cshtml" />
     <Content Include="Views\Knowledge\Regist.cshtml" />
+    <Content Include="Views\Knowledge\Study.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,41 @@
+﻿@using Ras.Web.LuneDeMiel.ViewModels.Knowledge;
+@model KnowledgeStudyViewModel
+@{
+	ViewBag.Title = "基礎知識 お勉強";
+}
+<div class="view-name">基礎知識勉強</div>
+<div class="main">
+	<div class="content">
+		<div style="float:left; margin:10px;">
+			<img src="~/Content/Images/no_image.png" />
+		</div>
+		<div class="questionText">
+			<div class="subtitle" style="font-size:15pt;">@Model.Title</div>
+			<div style="min-height:100px;">
+				@Model.ContentFirst
+				<input type="text" id="answer">
+				@Model.ContentEnd
+			</div>
+
+			<div style="margin: 10px 0px; float:none;">
+				<div class="subtitle" style="color:red; font-size:15pt;" onClick="dispAnswer()">
+					答え
+				</div>
+				<div id="ans" style="visibility:hidden;">@Model.Keyword</div>
+				<font size=2>※『答え』をクリックすると答えが表示されます。</font>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="text-align:center;">
+	<span>
+		<button class="normal" type="button">戻る</button>
+		<button class="success" type="button">次の問題へ</button>
+	</span>
+</div>
+<script>
+	function dispAnswer()
+	{
+		$("#ans").css("visibility", "visible");
+	}
+</script>
